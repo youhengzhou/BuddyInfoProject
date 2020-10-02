@@ -6,17 +6,27 @@ public class AddressBook {
     }
 
     public void addBuddy(BuddyInfo buddy){
-        this.buddyList.add(buddy);
+        if(buddy != null) {
+            this.buddyList.add(buddy);
+        }
     }
 
-    public void removeBuddy(BuddyInfo buddy){
-        this.buddyList.remove(buddy);
+    public void removeBuddy(int index){
+        if(index >= 0 && index < buddyList.size()){
+            this.buddyList.remove(index);
+        }
+    }
+
+    public void removeLast(BuddyInfo buddy){
+        if(buddy != null) {
+            this.buddyList.remove(buddy);
+        }
     }
 
     public static void main(String[] args){
         BuddyInfo buddy = new BuddyInfo("Tom", "carleton");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
     }
 }
