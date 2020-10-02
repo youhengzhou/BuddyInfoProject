@@ -17,7 +17,7 @@ public class AddressBook {
         }
     }
 
-    public void removeLast(BuddyInfo buddy){
+    public void removeLastBuddy(BuddyInfo buddy){
         if(buddy != null) {
             this.buddyList.remove(buddy);
         }
